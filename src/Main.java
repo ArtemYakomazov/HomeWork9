@@ -41,15 +41,20 @@ public class Main {
         //Task 3
         System.out.println("Task 3");
 
-        maxSumCost = maxSumCost / 5;
+        maxSumCost = maxSumCost /  cost.length;
         System.out.println("Средняя сумма трат за месяц составила " + maxSumCost + " рублей");
 
         //Task 4
         System.out.println("Task 4");
 
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);
+        for (int i =0, j = reverseFullName.length - 1; i < j; i++, j--){
+            char temp = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[j];
+            reverseFullName[j] = temp;
+        }
+        for (char i : reverseFullName) {
+            System.out.print(i);
         }
     }
 }
